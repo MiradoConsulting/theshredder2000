@@ -27,9 +27,9 @@ public class TheShredder2000 extends Robot
 		// Robot main loop
 		while(true) {
 			// Replace the next 4 lines with any behavior you would like
-			ahead(1000);
+			ahead(800);
 
-			turnLeft(30);
+			turnLeft(25);
 		}
 	}
 
@@ -51,7 +51,7 @@ public class TheShredder2000 extends Robot
 	 */
 	public void onHitByBullet(HitByBulletEvent e) {
 		// Replace the next line with any behavior you would like
-		turnLeft(45);
+		turnLeft(33);
 		ahead(500);
 	}
 	
@@ -60,6 +60,6 @@ public class TheShredder2000 extends Robot
 	 */
 	public void onHitWall(HitWallEvent e) {
 		// Replace the next line with any behavior you would like
-		turnLeft(90);
+		turnLeft(33);
 	}	
 }
