@@ -23,9 +23,9 @@ public class TheShredder2000 extends Robot
 		while(true) {
 			// Replace the next 4 lines with any behavior you would like
 			ahead(100);
-			turnGunRight(360);
-			back(100);
-			turnGunRight(360);
+			turnLeft(90);
+			ahead(200);
+			turnLeft(90);
 		}
 	}
 
@@ -35,6 +35,11 @@ public class TheShredder2000 extends Robot
 	public void onScannedRobot(ScannedRobotEvent e) {
 		// Replace the next line with any behavior you would like
 		fire(1);
+		turnLeft(200);
+		ahead(100);
+		turnGunLeft(-220);
+		fire(1);
+		ahead(300);
 	}
 
 	/**
