@@ -35,9 +35,9 @@ public class TheShredder2000 extends Robot
 	public void onScannedRobot(ScannedRobotEvent e) {
 		// Replace the next line with any behavior you would like
 		fire(1);
-		turnLeft(200);
+		turnLeft(90);
 		ahead(100);
-		turnGunLeft(-220);
+		turnGunLeft(-100);
 		fire(1);
 		ahead(300);
 	}
@@ -47,7 +47,8 @@ public class TheShredder2000 extends Robot
 	 */
 	public void onHitByBullet(HitByBulletEvent e) {
 		// Replace the next line with any behavior you would like
-		back(10);
+		turnLeft(90);
+		ahead(300);
 	}
 	
 	/**
@@ -55,6 +56,6 @@ public class TheShredder2000 extends Robot
 	 */
 	public void onHitWall(HitWallEvent e) {
 		// Replace the next line with any behavior you would like
-		back(20);
+		turnLeft(90);
 	}	
 }
