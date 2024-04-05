@@ -27,6 +27,7 @@ public class TheShredder2000 extends Robot
 		// Robot main loop
 		while(true) {
 			// Replace the next 4 lines with any behavior you would like
+			setAdjustRadarForGunTurn(90);
 			ahead(1000);
 			turnLeft(30);
 		}
