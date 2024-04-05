@@ -42,7 +42,9 @@ public class TheShredder2000 extends Robot
 		// Replace the next line with any behavior you would like
 		fire(1);
 		turnLeft(90);
+		fire(1);
 		ahead(100);
+		fire(1);
 		turnGunLeft(-100);
 		ahead(300);
 	}
@@ -52,8 +54,8 @@ public class TheShredder2000 extends Robot
 	 */
 	public void onHitByBullet(HitByBulletEvent e) {
 		// Replace the next line with any behavior you would like
-		turnLeft(90);
-		ahead(300);
+		turnLeft(45);
+		ahead(500);
 	}
 	
 	/**
