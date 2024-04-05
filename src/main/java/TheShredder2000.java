@@ -13,6 +13,11 @@ public class TheShredder2000 extends Robot
 	 */
 	public void run() {
 		// Initialization of the robot should be put here
+		setBodyColor(java.awt.Color.green);
+        setGunColor(java.awt.Color.green);
+        setRadarColor(java.awt.Color.green);
+        setBulletColor(java.awt.Color.green);
+        setScanColor(java.awt.Color.green);
 
 		// After trying out your robot, try uncommenting the import at the top,
 		// and the next line:
@@ -34,13 +39,17 @@ public class TheShredder2000 extends Robot
 	 * onScannedRobot: What to do when you see another robot
 	 */
 	public void onScannedRobot(ScannedRobotEvent e) {
-		// Replace the next line with any behavior you would like
-		fire(1);
-		turnLeft(90);
-		ahead(100);
-		turnGunLeft(-100);
-		fire(1);
-		ahead(300);
+		if (e.getDistance() < 300) {
+            // Turn the radar to focus on the enemy
+            turnRadarRight(getRadarTurnRemaining());
+            // Turn the gun to target the enemy
+            turnGunRight(getHeading() - getGunHeading() + e.getBearing());
+            // Fire at the enemy
+            fire(3);
+        } else {
+            // If the enemy is far away, turn the radar to continue scanning
+            turnRadarRight(360);
+        }
 	}
 
 	/**
