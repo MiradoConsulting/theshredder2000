@@ -13,11 +13,11 @@ public class TheShredder2000 extends Robot
 	 */
 	public void run() {
 		// Initialization of the robot should be put here
-		setBodyColor(java.awt.Color.green);
-        setGunColor(java.awt.Color.green);
-        setRadarColor(java.awt.Color.green);
-        setBulletColor(java.awt.Color.green);
-        setScanColor(java.awt.Color.green);
+		setBodyColor(java.awt.Color.red);
+        setGunColor(java.awt.Color.red);
+        setRadarColor(java.awt.Color.red);
+        setBulletColor(java.awt.Color.red);
+        setScanColor(java.awt.Color.red);
 
 		// After trying out your robot, try uncommenting the import at the top,
 		// and the next line:
@@ -28,7 +28,7 @@ public class TheShredder2000 extends Robot
 		while(true) {
 			// Replace the next 4 lines with any behavior you would like
 			turnRadarLeft(45);
-			ahead(100);
+			ahead(1000);
 			turnLeft(90);
 			ahead(200);
 			turnLeft(90);
@@ -44,7 +44,6 @@ public class TheShredder2000 extends Robot
 		turnLeft(90);
 		ahead(100);
 		turnGunLeft(-100);
-		fire(1);
 		ahead(300);
 	}
 
